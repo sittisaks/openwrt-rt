@@ -219,6 +219,18 @@ define BuildFirmware/DefaultDualSize/initramfs
 	$(call BuildFirmware/OF/initramfs,$(1),$(2)-8M,$(3)-8M)
 endef
 
+# wrappers for boards that have 4MB , 8MB and 16MB versions
+define BuildFirmware/Default3Size/squashfs
+	$(call BuildFirmware/Default4M/$(1),$(1),$(2)-4M,$(3)-4M)
+	$(call BuildFirmware/Default8M/$(1),$(1),$(2)-8M,$(3)-8M)
+	$(call BuildFirmware/Default16M/$(1),$(1),$(2)-16M,$(3)-16M)
+endef
+define BuildFirmware/Default3Size/initramfs
+	$(call BuildFirmware/OF/initramfs,$(1),$(2)-4M,$(3)-4M)
+	$(call BuildFirmware/OF/initramfs,$(1),$(2)-8M,$(3)-8M)
+	$(call BuildFirmware/OF/initramfs,$(1),$(2)-16M,$(3)-16M)
+endef
+
 # Some boards need a special header inside the uImage to make them bootable
 define BuildFirmware/CustomFlashFactory/squashfs
 	$(call BuildFirmware/CustomFlash/$(1),$(1),$(2),$(3),$(4))
@@ -540,7 +552,7 @@ define BuildFirmware/HLKRM04/initramfs
 endef
 Image/Build/Profile/HLKRM04=$(call BuildFirmware/HLKRM04/$(1),$(1),hlk-rm04,HLKRM04,HLK-RM02)
 
-Image/Build/Profile/P4F001=$(call BuildFirmware/DefaultDualSize/$(1),$(1),p4f-001,P4F001)
+Image/Build/Profile/P4F001=$(call BuildFirmware/Default3Size/$(1),$(1),p4f-001,P4F001)
 #Image/Build/Profile/P4F001=$(call BuildFirmware/Default16M/$(1),$(1),p4f-001,P4F001)
 
 Image/Build/Profile/HT-TM02=$(call BuildFirmware/Default8M/$(1),$(1),ht-tm02,HT-TM02)
