@@ -125,6 +125,7 @@ ramips_setup_interfaces()
 	mt7628 | \
 	mzk-w300nh2 | \
 	mzk-750dhp | \
+	p4f-001 | \
 	whr-300hp2 | \
 	whr-600d | \
 	wsr-600 | \
@@ -300,6 +301,7 @@ ramips_setup_macs()
 	mpr-a2 | \
 	dir-300-b7 | \
 	dir-320-b1 | \
+	p4f-001 | \
 	psr-680w |\
 	sl-r7205 |\
 	y1 |\

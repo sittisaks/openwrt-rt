@@ -163,6 +163,9 @@ case $board in
 		set_wifi_led "miniplug:green:wlan"
 		set_usb_led "miniplug:green:mobile"
 		;;
+        p4f-001)
+                set_wifi_led "rt2800pci-phy0::radio"
+                ;;
 	px4885)
 		set_wifi_led "7links:orange:wifi"
 		set_usb_led "7links:blue:storage"

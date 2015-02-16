@@ -32,4 +32,8 @@ Sunshine!
 	Your OpenWrt Project
 	http://openwrt.org
 
+====================================================================================
+02/16/2015 
+Add p4f001 base on rt5350 with 16M Flash and 32M RAM, i2c, USB
+Base on OpenWRT ccdf6dc010518b1b44248c934f57e83f22d1e64c
 

@@ -232,6 +232,9 @@ ramips_board_detect() {
 	*"Omnima MiniPlug")
 		name="omni-plug"
 		;;
+	*"P4F P4F-001")
+		name="p4f-001"
+		;;
 	*"Petatel PSR-680W"*)
 		name="psr-680w"
 		;;

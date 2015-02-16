@@ -71,6 +71,7 @@ platform_check_image() {
 	omni-emb | \
 	omni-emb-hpm | \
 	omni-plug | \
+	p4f-001 | \
 	psr-680w | \
 	px4885 | \
 	rp-n53 | \
